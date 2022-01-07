@@ -1,38 +1,154 @@
 .App {
-  text-align: center;
+    background-color: #F5F6F7;
+    padding-top: 40px;
+    min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-post-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-button {
+    background-color: white;
+    width: 500px;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.add-button button {
+    padding: 10px 0px 10px 15px;
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.2rem;
+    color: gray;
 }
 
-.App-link {
-  color: #61dafb;
+.add-button button:hover {
+    background-color: #cccc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.modal-wrapper {
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    text-align: center;
+}
+
+.modal-wrapper h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+}
+
+.modal-wrapper input {
+    border: none;
+    padding: 10px;
+    width: 90%;
+    font-size: 1.2rem;
+}
+
+.modal-wrapper input:focus {
+    outline: none;
+}
+
+.modal-wrapper input:focus::placeholder {
+    color: transparent;
+}
+
+.hidden {
+    display: none;
+}
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+}
+
+.close-button svg {
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 8px;
+    border-radius: 45%;
+    color: gray;
+}
+
+.post-button {
+    padding: 20px 20px;
+}
+
+.post-button button {
+    width: 100%;
+    background-color: #1b74e4;
+    border: none;
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.post-card-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.post-card {
+    background-color: white;
+    width: 500px;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.content-card {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.button-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 50px;
+}
+
+.button-card button {
+    background-color: #1b74e4;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.button-card button:last-child {
+    background-color: red;
 }
